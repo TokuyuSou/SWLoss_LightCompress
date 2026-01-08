@@ -36,11 +36,11 @@ quant:
         # Loss function configuration - Using Hybrid MSE + Sliced-Wasserstein
         loss_method: mse_sw  # Hybrid loss combining MSE and SW
         loss_kwargs:
-            sw_num_projections: 16  # Number of random projections for SW distance
+            sw_num_projections: 128  # Number of random projections (recommended: 128-256)
             sw_block_size: null  # Block size for SW (null = token-level, int = block-level)
             reduction: mean
-            hybrid_weights:  # Weighting for hybrid loss
-                base: 1.0  # Weight for MSE component
+            hybrid_weights:  # Weighting for hybrid loss (recommended: sum to 1.0)
+                base: 0.9  # Weight for MSE component
                 sw: 0.1  # Weight for SW component
         # Set to "True" for 2-bit quantization.
         aug_loss: False

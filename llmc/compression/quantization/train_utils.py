@@ -42,7 +42,7 @@ class TruncateFunction(torch.autograd.Function):
 
 
 class LossFunction:
-    def __init__(self, method='mse', reduction='mean', dim=0, sw_num_projections=16,
+    def __init__(self, method='mse', reduction='mean', dim=0, sw_num_projections=128,
                  sw_block_size=None, hybrid_weights=None):
         """
         Loss function wrapper supporting multiple loss methods.
@@ -53,10 +53,11 @@ class LossFunction:
             reduction: Reduction method for standard losses ('mean', 'sum', 'none')
             dim: Dimension for distribution loss
             sw_num_projections: Number of random projections for Sliced-Wasserstein distance
+                               (default: 128, recommended: 128-256)
             sw_block_size: Block size for SW distance. If None, use token-level computation.
                           If specified, treats each block as one sample.
             hybrid_weights: Dict with keys 'base' and 'sw' for hybrid loss weighting.
-                          E.g., {'base': 1.0, 'sw': 0.1}
+                          Recommended to sum to 1.0. E.g., {'base': 0.9, 'sw': 0.1}
         """
         self.method = method
         self.reduction = reduction
@@ -64,9 +65,9 @@ class LossFunction:
         self.sw_num_projections = sw_num_projections
         self.sw_block_size = sw_block_size
 
-        # Set default hybrid weights if using hybrid loss
+        # Set default hybrid weights if using hybrid loss (sum to 1.0)
         if hybrid_weights is None:
-            self.hybrid_weights = {'base': 1.0, 'sw': 0.1}
+            self.hybrid_weights = {'base': 0.9, 'sw': 0.1}
         else:
             self.hybrid_weights = hybrid_weights
 

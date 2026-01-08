@@ -36,7 +36,7 @@ quant:
         # Loss function configuration - Using Sliced-Wasserstein distance
         loss_method: sliced_wasserstein  # Options: 'mse', 'l2', 'sliced_wasserstein', 'sw', 'mse_sw', 'l2_sw'
         loss_kwargs:
-            sw_num_projections: 16  # Number of random projections for SW distance
+            sw_num_projections: 128  # Number of random projections (recommended: 128-256)
             sw_block_size: null  # Block size for SW (null = token-level, int = block-level)
             reduction: mean
         # Set to "True" for 2-bit quantization.
