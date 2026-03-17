@@ -1,6 +1,6 @@
 # Sliced-Wasserstein Loss for LLM Quantization
 
-[![Paper](https://img.shields.io/badge/Paper-arXiv-red.svg)](https://arxiv.org/abs/2601.07878)
+[![Paper](https://img.shields.io/badge/Paper-ICAART%202026-red.svg)](https://arxiv.org/abs/2601.07878)
 [![LightCompress](https://img.shields.io/badge/LightCompress-Library-blue.svg)](https://github.com/ModelTC/LightCompress)
 [![Documentation](https://img.shields.io/badge/Docs-ReadTheDocs-green.svg)](https://llmc-en.readthedocs.io/en/latest/)
 
@@ -276,11 +276,15 @@ For block size `b`:
 If you use the Sliced-Wasserstein loss for LLM quantization in your research, please cite our paper:
 
 ```bibtex
-@article{cao2026sliced,
-  title={Sliced-Wasserstein Distance for LLM Quantization},
-  author={Cao, Deyu and Yin, Yixin and Aref, Samin},
-  journal={arXiv preprint arXiv:2601.07878},
-  year={2026}
+@inproceedings{cao2026sliced,
+  author={Cao, D. and Yin, Y. and Aref, S.},
+  title={Sliced-Wasserstein Distribution Alignment Loss Improves the Ultra-Low-Bit Quantization of Large Language Models},
+  booktitle={Proceedings of the 18th International Conference on Agents and Artificial Intelligence - Volume 2},
+  editor={Rocha, Ana Paula and Wahde, Mattias and van den Herik, H. Jaap},
+  pages={1789--1800},
+  year={2026},
+  isbn={978-989-758-796-2},
+  issn={2184-433X}
 }
 ```
 
@@ -310,7 +314,7 @@ Potential extensions:
 
 ### Core Papers
 
-1. **This Work**: [Sliced-Wasserstein Distance for LLM Quantization](https://arxiv.org/abs/2601.07878) (2025)
+1. **This Work**: Cao, D.; Yin, Y. and Aref, S. (2026). [*Sliced-Wasserstein Distribution Alignment Loss Improves the Ultra-Low-Bit Quantization of Large Language Models*](https://arxiv.org/abs/2601.07878). In Ana Paula Rocha, Mattias Wahde, H. Jaap van den Herik (Eds.), *Proceedings of the 18th International Conference on Agents and Artificial Intelligence - Volume 2*, pages 1789-1800, ISBN 978-989-758-796-2, ISSN 2184-433X.
 2. **LightCompress**: [LLMC: Benchmarking Large Language Model Quantization](https://github.com/ModelTC/LightCompress)
 
 ### Quantization Methods
