@@ -4,6 +4,14 @@
 [![LightCompress](https://img.shields.io/badge/LightCompress-Library-blue.svg)](https://github.com/ModelTC/LightCompress)
 [![Documentation](https://img.shields.io/badge/Docs-ReadTheDocs-green.svg)](https://llmc-en.readthedocs.io/en/latest/)
 
+**Sliced-Wasserstein Distribution Alignment Loss Improves the Ultra-Low-Bit Quantization of Large Language Models**
+
+Deyu Cao, Yixin Yin, Samin Aref
+
+*Proceedings of the 18th International Conference on Agents and Artificial Intelligence - Volume 2: ICAART*, 2026
+
+[[Paper]](https://arxiv.org/abs/2601.07878) [[DOI]](https://doi.org/10.5220/0014431500004052)
+
 ## Overview
 
 This repository provides an extension to the [LightCompress](https://github.com/ModelTC/LightCompress) library, implementing **Sliced-Wasserstein (SW) distance** as a loss function for LLM quantization. The SW loss can be applied to various blockwise optimization-based quantization methods (OmniQuant, TesseraQ, NormTweaking, etc.) as an alternative or complementary loss to traditional MSE/L2 losses.
@@ -276,15 +284,19 @@ For block size `b`:
 If you use the Sliced-Wasserstein loss for LLM quantization in your research, please cite our paper:
 
 ```bibtex
-@inproceedings{cao2026sliced,
-  author={Cao, D. and Yin, Y. and Aref, S.},
-  title={Sliced-Wasserstein Distribution Alignment Loss Improves the Ultra-Low-Bit Quantization of Large Language Models},
-  booktitle={Proceedings of the 18th International Conference on Agents and Artificial Intelligence - Volume 2},
-  editor={Rocha, Ana Paula and Wahde, Mattias and van den Herik, H. Jaap},
-  pages={1789--1800},
-  year={2026},
-  isbn={978-989-758-796-2},
-  issn={2184-433X}
+@inproceedings{cao2026,
+author={Deyu Cao and Yixin Yin and Samin Aref},
+title={Sliced-{W}asserstein Distribution Alignment Loss Improves the Ultra-Low-Bit Quantization of Large Language Models},
+booktitle={Proceedings of the 18th International Conference on Agents and Artificial Intelligence - Volume 2: ICAART},
+year={2026},
+pages={1789-1800},
+editors={Ana Paula Rocha and Mattias Wahde and H. Jaap van den Herik},
+publisher={SciTePress},
+organization={INSTICC},
+doi={10.5220/0014431500004052},
+isbn={978-989-758-796-2},
+issn={2184-433X},
+url={https://doi.org/10.5220/0014431500004052}
 }
 ```
 
